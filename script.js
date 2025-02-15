@@ -1,6 +1,5 @@
 const reviewsContainer = document.getElementById('reviews-container');
 
-// Tab Switching
 document.querySelectorAll('.tab').forEach(tab => {
     tab.addEventListener('click', () => {
         document.querySelector('.tab.active').classList.remove('active');
@@ -10,14 +9,12 @@ document.querySelectorAll('.tab').forEach(tab => {
     });
 });
 
-// Star Rating Logic
 document.querySelectorAll('.stars').forEach(starsContainer => {
     starsContainer.addEventListener('click', (e) => {
         if (e.target.tagName === 'SPAN') {
             let value = e.target.getAttribute('data-value');
             let stars = e.target.parentNode.querySelectorAll('span');
             
-            // Set the 'active' class for all stars up to the clicked one
             stars.forEach(star => {
                 if (star.getAttribute('data-value') <= value) {
                     star.classList.add('active');
@@ -29,7 +26,6 @@ document.querySelectorAll('.stars').forEach(starsContainer => {
     });
 });
 
-// Submit Review Logic
 function submitReview() {
     const overallRating = document.querySelector('#overall-stars .active:last-child')?.getAttribute('data-value') || 0;
     const reviewText = document.getElementById('review-text').value;
@@ -55,7 +51,6 @@ function submitReview() {
     `;
     reviewsContainer.appendChild(reviewCard);
 
-    // Clear all inputs and reset stars
     document.querySelectorAll('.stars span').forEach(star => star.classList.remove('active'));
     document.getElementById('review-text').value = '';
     document.getElementById('photo').value = '';

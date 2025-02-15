@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our Critique Corner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Critique Corner</h1>
+        <div class="welcome-section">
+            <p>We value your opinions! Share your thoughts and feature-wise reviews on products you've used.</p>
+        </div>
+
+        <div class="tabs">
+            <div class="tab active" data-tab="reviews">Write a Review</div>
+            <div class="tab" data-tab="all-reviews">All Reviews</div>
+        </div>
+
+        <div class="tab-content active" id="reviews">
+            <h2>Submit Your Review</h2>
+            <div class="review-section">
+                <label>Overall Rating:</label>
+                <div class="stars" id="overall-stars">
+                    <span data-value="1">★</span>
+                    <span data-value="2">★</span>
+                    <span data-value="3">★</span>
+                    <span data-value="4">★</span>
+                    <span data-value="5">★</span>
+                </div>
+
+                <div class="feature-reviews">
+                    <div class="feature-review">
+                        <label>Durability</label>
+                        <div class="stars" data-feature="durability">
+                            <span data-value="1">★</span>
+                            <span data-value="2">★</span>
+                            <span data-value="3">★</span>
+                            <span data-value="4">★</span>
+                            <span data-value="5">★</span>
+                        </div>
+                    </div>
+                    <div class="feature-review">
+                        <label>Design</label>
+                        <div class="stars" data-feature="design">
+                            <span data-value="1">★</span>
+                            <span data-value="2">★</span>
+                            <span data-value="3">★</span>
+                            <span data-value="4">★</span>
+                            <span data-value="5">★</span>
+                        </div>
+                    </div>
+                    <div class="feature-review">
+                        <label>Value for Money</label>
+                        <div class="stars" data-feature="value">
+                            <span data-value="1">★</span>
+                            <span data-value="2">★</span>
+                            <span data-value="3">★</span>
+                            <span data-value="4">★</span>
+                            <span data-value="5">★</span>
+                        </div>
+                    </div>
+                </div>
+
+                <textarea id="review-text" rows="4" placeholder="Write your review here..."></textarea>
+
+                <div class="file-input">
+                    <label for="photo">Upload a photo:</label>
+                    <input type="file" id="photo" accept="image/*">
+                </div>
+
+                <div class="submit-review">
+                    <button class="submit-btn" onclick="submitReview()">Submit Review</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="all-reviews">
+            <h2>All Reviews</h2>
+            <div class="reviews-container" id="reviews-container"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f6d365, #fda085);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+h1, h2, h3 {
+    color: #333;
+    text-align: center;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 12px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #fff;
+    background: #7fdbda;
+    border-radius: 20px;
+    transition: background 0.3s;
+}
+
+.tab:hover {
+    background: #34a4a4;
+}
+
+.tab.active {
+    background: #ff6f61;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.welcome-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.welcome-section p {
+    font-size: 18px;
+    color: #666;
+}
+
+.stars span {
+    font-size: 24px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.stars span.active {
+    color: #ffca28;
+}
+
+.review-section, .feature-reviews {
+    margin-top: 20px;
+}
+
+.feature-reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.feature-review {
+    background: #f6f8fa;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feature-review label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.submit-review {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.submit-btn {
+    background: #ff6f61;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background: #e95e51;
+}
+
+.reviews-container {
+    margin-top: 20px;
+}
+
+.review-card {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f6f8fa;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.review-card img {
+    max-width: 150px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.file-input {
+    margin-top: 15px;
+}
+
+#review-text {
+    width: 100%;
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    resize: vertical;
+}
+
+#review-text:focus {
+    outline: none;
+    border-color: #ff6f61;
+}
+
+@media (max-width: 768px) {
+    .tabs {
+        flex-wrap: wrap;
+    }
+
+    .tab {
+        flex: 1;
+        text-align: center;
+    }
+}
